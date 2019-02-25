@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function countBasketCost (x) {
+		for(i = 0; i < basket.length; i++){
+			basket_cost = basket_cost + basket[i].cost;
+		}
+		return basket_cost
+	}
+
+	var basket_cost = 0;
+	basket = [{name: "Купальник", cost:300}, {name:"Джинсы", cost:600}, {name:"Шляпа", cost:400},{name:"Ремень", cost:300}];
+
+	document.write("<h1>В корзине</h1>");
+	for(i = 0; i < basket.length; i++){
+	document.write(basket[i].name + " - " + basket[i].cost + " рублей<br> ");}
+	document.write("Общая сумма заказа - " + countBasketCost() + " Рублей");
+</script>
